@@ -90,16 +90,13 @@ def stream_response(response):
 def show_personality_menu():
     """Display personality choices for end user"""
     
-    persona_dict= {
-        1:"tutor",
-        2:"pirate",
-        3:"poet"
-    }
+    persona_dict= {}
     
     print("\n" + "-" * 40)
     print("Available personalities:")
     for i, (key, persona) in enumerate(PERSONALITIES.items(), 1):
         print(f"  {i}. {persona['name']} ({key})")
+        persona_dict[i] = key
     print("-" * 40)
     
     while True:
